@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title data-i18n="about_page_title">
+    About Us | Jarvi Nursery
+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/language.css" />
+</head>
+
+<body>
+
+<!-- =======================================
+LANGUAGE SELECTION POPUP
+======================================== -->
+
+<div id="languageModal" class="language-modal">
+
+    <div class="language-box">
+
+        <div class="language-logo">
+            🌱
+        </div>
+
+        <h2 data-i18n="language_title">
+            Select Your Language
+        </h2>
+
+        <p data-i18n="language_description">
+            Please choose your preferred language.
+        </p>
+
+        <div class="language-options">
+
+            <button class="language-btn" data-lang="en">
+                🇬🇧 English
+            </button>
+
+            <button class="language-btn" data-lang="hi">
+                🇮🇳 हिन्दी
+            </button>
+
+            <button class="language-btn" data-lang="gu">
+                🇮🇳 ગુજરાતી
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =======================================
+HEADER
+======================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <div class="logo">
+
+            <a href="index.html">
+                <img
+                    src="images/JarviLogo.jpg"
+                    alt="Jarvi Nursery"
+                    class="site-logo-img">
+            </a>
+
+        </div>
+
+        <input
+            type="checkbox"
+            id="navToggle"
+            class="nav-toggle"
+            aria-hidden="true"
+        />
+
+        <label
+            for="navToggle"
+            class="nav-burger"
+            aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </label>
+
+        <nav>
+
+            <a
+                href="index.html"
+                data-i18n="nav_home">
+                Home
+            </a>
+
+            <a
+                href="achievements.html"
+                data-i18n="nav_achievements">
+                Achievements
+            </a>
+
+            <a
+                href="about.html"
+                class="active-nav-link"
+                data-i18n="nav_about">
+                About
+            </a>
+
+            <a
+                href="index.html#contact"
+                data-i18n="nav_contact">
+                Contact
+            </a>
+
+            <a
+                href="order.html"
+                class="nav-cta"
+                data-i18n="nav_order">
+                Order Now
+            </a>
+
+            <select class="language-switcher" aria-label="Change language">
+                <option value="en">🇬🇧 English</option>
+                <option value="hi">🇮🇳 हिन्दी</option>
+                <option value="gu">🇮🇳 ગુજરાતી</option>
+            </select>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- =======================================
+ABOUT HERO
+======================================== -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <p class="eyebrow section-eyebrow" data-i18n="about_eyebrow">
+            <span class="eyebrow-dot"></span>
+            Our Story
+        </p>
+
+        <h1 data-i18n="about_title">
+            About Jarvi Nursery
+        </h1>
+
+        <p class="section-sub" data-i18n="about_intro">
+            For 14+ years, farmers across India have trusted Jarvi for guava saplings
+            built for real fields, real soil, and real income. Deep red pulp, heavy fruit,
+            premium market price — every season.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+ABOUT DETAILS
+======================================== -->
+
+<section class="about-details">
+
+    <div class="container about-details-grid">
+
+        <div class="about-detail-card">
+            <h3 data-i18n="about_who_title">Who We Are</h3>
+            <p data-i18n="about_who_body">
+                Jarvi Seeds & Nursery Pvt. Ltd. is a Gujarat-based nursery specialising in
+                high-yield guava saplings, grown and grafted using our own rootstock
+                technology. We are proud to be India's first NHB (National Horticulture Board)
+                registered nursery in Dragon Fruit.
+            </p>
+        </div>
+
+        <div class="about-detail-card">
+            <h3 data-i18n="about_mission_title">Our Mission</h3>
+            <p data-i18n="about_mission_body">
+                To give every farmer — from a half-acre plot to a large commercial orchard —
+                access to saplings that are bred for real field conditions, not just for
+                looking good in a nursery. Higher yield, stronger disease resistance, and a
+                better price at market.
+            </p>
+        </div>
+
+        <div class="about-detail-card">
+            <h3 data-i18n="about_reach_title">Our Reach</h3>
+            <p data-i18n="about_reach_body">
+                Grown in Bharadiya, Valia, Bharuch, Gujarat, and delivered across India.
+                500+ farmers already trust Jarvi saplings for their orchards.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+QUOTES
+(Certificates and further details to be
+added here later)
+======================================== -->
+
+<section class="about-quotes">
+
+    <div class="container">
+
+        <p class="eyebrow section-eyebrow" data-i18n="about_quotes_eyebrow">
+            <span class="eyebrow-dot"></span>
+            In Our Own Words
+        </p>
+
+        <h2 data-i18n="about_quotes_title">
+            What We Believe
+        </h2>
+
+        <div class="quotes-grid">
+
+            <blockquote class="quote-card">
+                <p data-i18n="about_quote_1">
+                    "A sapling is a promise to a farmer's next three harvests —
+                    we don't take that lightly."
+                </p>
+            </blockquote>
+
+            <blockquote class="quote-card">
+                <p data-i18n="about_quote_2">
+                    "Grown for the field, not the greenhouse."
+                </p>
+            </blockquote>
+
+            <blockquote class="quote-card">
+                <p data-i18n="about_quote_3">
+                    "Fourteen years in, we still test every variety in real soil
+                    before it reaches a farmer's cart."
+                </p>
+            </blockquote>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+COLLABORATION SECTION
+(logos to be added here later)
+======================================== -->
+
+<section class="collab-section">
+
+    <div class="container collab-inner">
+
+        <p class="collab-quote" data-i18n="collab_quote">
+            &ldquo;Great things in farming grow through great partnerships.&rdquo;
+        </p>
+
+        <p class="collab-line" data-i18n="collab_line">
+            In Collaboration with Akshar Nursery
+        </p>
+
+        <!-- Partner logos will go here once ready -->
+        <div class="collab-logos"></div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+FOOTER
+======================================== -->
+
+<footer class="site-footer" id="contact">
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <img
+                    src="images/JarviLogo.jpg"
+                    alt="Jarvi Nursery"
+                    class="footer-logo-img">
+
+            </div>
+
+            <p data-i18n="footer_description">
+
+                Guava saplings grown for real fields,
+                real soil, and real income.
+
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h5 data-i18n="footer_visit">
+                Visit / Write
+            </h5>
+
+            <p>
+
+                <span data-i18n="footer_address1">
+                    Jarvi Seeds & Nursery Pvt. Ltd.
+                </span>
+
+                <br>
+
+                <span data-i18n="footer_address2">
+                    House No. 17, Opp. Water Tank, At &amp; Post Bharadia, Tal. Valia, Dist. Bharuch, Gujarat, India — 393135
+                </span>
+
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h5 data-i18n="footer_call">
+                Call Us
+            </h5>
+
+            <p>
+
+                <a href="tel:+918128314911">
+                    +91 81283 14911
+                </a>
+
+                <br>
+
+                <a href="tel:+918140588289">
+                    +91 81405 88289
+                </a>
+
+                <br>
+
+                <a href="tel:+919081935975">
+                    +91 90819 35975
+                </a>
+
+            </p>
+
+            <p class="footer-extra-contact">
+
+                <span class="footer-contact-label" data-i18n="footer_office_contact_label">Office Contact:</span>
+                <a href="tel:+919725633994">+91 97256 33994</a>
+
+                <br>
+
+                <span class="footer-contact-label" data-i18n="footer_dealer_contact_label">Dealer Contact:</span>
+                <a href="tel:+919063110963">+91 90631 10963</a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+              <p data-i18n="footer_copyright">
+            &copy; 2026 Jarvi Seeds & Nursery Pvt. Ltd.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="js/language.js"></script>
+
+</body>
+</html>

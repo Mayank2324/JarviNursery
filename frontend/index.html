@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title data-i18n="page_title">
+    Jarvi Nursery | Premium Guava Saplings — Gujarat
+</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/language.css" />
+</head>
+
+<body>
+
+<!-- =======================================
+LANGUAGE SELECTION POPUP
+======================================== -->
+
+<div id="languageModal" class="language-modal">
+
+    <div class="language-box">
+
+        <div class="language-logo">
+            🌱
+        </div>
+
+        <h2 data-i18n="language_title">
+            Select Your Language
+        </h2>
+
+        <p data-i18n="language_description">
+            Please choose your preferred language.
+        </p>
+
+        <div class="language-options">
+
+            <button class="language-btn" data-lang="en">
+                🇬🇧 English
+            </button>
+
+            <button class="language-btn" data-lang="hi">
+                🇮🇳 हिन्दी
+            </button>
+
+            <button class="language-btn" data-lang="gu">
+                🇮🇳 ગુજરાતી
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =======================================
+HEADER
+======================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+        <div class="logo">
+
+            <a href="index.html">
+                <img
+                    src="images/JarviLogo.jpg"
+                    alt="Jarvi Nursery"
+                    class="site-logo-img">
+            </a>
+
+        </div>
+
+        <input
+            type="checkbox"
+            id="navToggle"
+            class="nav-toggle"
+            aria-hidden="true"
+        />
+
+        <label
+            for="navToggle"
+            class="nav-burger"
+            aria-label="Open menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </label>
+
+        <nav>
+
+            <a
+                href="index.html"
+                data-i18n="nav_home">
+                Home
+            </a>
+
+            <a
+                href="achievements.html"
+                data-i18n="nav_achievements">
+                Achievements
+            </a>
+
+            <a
+                href="about.html"
+                data-i18n="nav_about">
+                About
+            </a>
+
+            <a
+                href="index.html#contact"
+                data-i18n="nav_contact">
+                Contact
+            </a>
+
+            <a
+                href="order.html"
+                class="nav-cta"
+                data-i18n="nav_order">
+                Order Now
+            </a>
+
+            <select class="language-switcher" aria-label="Change language">
+                <option value="en">🇬🇧 English</option>
+                <option value="hi">🇮🇳 हिन्दी</option>
+                <option value="gu">🇮🇳 ગુજરાતી</option>
+            </select>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- =======================================
+CERTIFICATION / COLLABORATION BAR
+======================================== -->
+
+<section class="cert-bar">
+
+    <div class="container cert-bar-inner">
+
+        <div class="cert-item">
+            <span class="cert-flag" aria-hidden="true">🇮🇳</span>
+            <span data-i18n="cert_nhb">
+                India's First NHB (National Horticulture Board) Registered Nursery in Dragon Fruit
+            </span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+HERO SECTION
+======================================== -->
+
+<section class="hero">
+
+    <div
+        class="hero-bg"
+        aria-hidden="true">
+    </div>
+
+    <div class="container hero-inner">
+
+        <div class="hero-copy">
+
+            <h2 data-i18n="hero_title">
+                Welcome to Jarvi Nursery
+            </h2>
+
+            <p
+                class="tagline"
+                data-i18n="hero_description">
+
+                For 14+ years, farmers across India have trusted Jarvi for guava saplings built for real fields, real soil, and real income. Deep red pulp, heavy fruit, premium market price — every season.
+
+            </p>
+
+            <div class="stats">
+
+                <div>
+
+                    <strong>14+</strong>
+
+                    <span data-i18n="hero_stat1">
+                        Years Expertise
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>All India</strong>
+
+                    <span data-i18n="hero_stat2">
+                        Delivery
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <strong>500+</strong>
+
+                    <span data-i18n="hero_stat3">
+                        Farmers Trust Us
+                    </span>
+
+                </div>
+
+            </div>
+
+            <a
+                href="order.html"
+                class="btn btn-primary"
+                data-i18n="hero_button">
+
+                Order Saplings
+
+                <svg
+                    class="btn-arrow"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true">
+
+                    <path
+                        d="M3 8h10M9 4l4 4-4 4"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+
+                </svg>
+
+            </a>
+
+        </div>
+
+        <div class="hero-visual-stack">
+
+            <!-- Drop images/hero-guava.jpg in place and add class="has-photo"
+                 below to switch from the illustration to your real photo -->
+            <div class="hero-visual has-photo">
+
+                <img
+                    class="hero-visual-photo"
+                    src="images/hero-guava.jpg"
+                    alt="Fresh Jarvi Red guava, cut open" />
+
+                <div class="hero-visual-illustration" aria-hidden="true">
+
+                    <svg viewBox="0 0 260 260" width="70%" height="70%">
+                        <defs>
+                            <linearGradient id="rindGradHero" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#8fae56"/>
+                                <stop offset="100%" stop-color="#5f7f3e"/>
+                            </linearGradient>
+                            <radialGradient id="fleshGradHero" cx="50%" cy="50%" r="55%">
+                                <stop offset="0%" stop-color="#e7a3a0"/>
+                                <stop offset="70%" stop-color="#c85b56"/>
+                                <stop offset="100%" stop-color="#b8433f"/>
+                            </radialGradient>
+                        </defs>
+                        <circle cx="130" cy="130" r="112" fill="url(#rindGradHero)"/>
+                        <circle cx="130" cy="130" r="94" fill="url(#fleshGradHero)"/>
+                        <circle cx="130" cy="130" r="32" fill="#832f2c" opacity="0.9"/>
+                        <g fill="#f6e6bd">
+                            <circle cx="118" cy="90" r="4.4"/>
+                            <circle cx="160" cy="104" r="4.4"/>
+                            <circle cx="172" cy="140" r="4.4"/>
+                            <circle cx="150" cy="172" r="4.4"/>
+                            <circle cx="108" cy="176" r="4.4"/>
+                            <circle cx="86" cy="146" r="4.4"/>
+                            <circle cx="96" cy="106" r="4.4"/>
+                        </g>
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+            <div
+                class="hero-card-tag"
+                data-i18n="hero_card_tag">
+
+                <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true">
+
+                    <path
+                        d="M12 2C8 6 6 10 6 13.5a6 6 0 0 0 12 0C18 10 16 6 12 2Z"
+                        stroke="currentColor"
+                        stroke-width="1.5"/>
+
+                    <path
+                        d="M12 2v11"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"/>
+
+                </svg>
+
+                Why Farmers Choose Jarvi
+
+            </div>
+
+            <h3 data-i18n="hero_card_title">
+                Grown for the field, not the greenhouse.
+            </h3>
+
+            <ul class="hero-card-list">
+
+                <li>
+
+                    <svg
+                        class="li-icon"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        aria-hidden="true">
+
+                        <path
+                            d="M3 9.5 7 13l8-8"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+
+                    </svg>
+
+                    <span data-i18n="hero_feature1">
+                        Special rootstock technology — 30–40% higher yield
+                    </span>
+
+                </li>
+
+                <li>
+
+                    <svg
+                        class="li-icon"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        aria-hidden="true">
+
+                        <path
+                            d="M3 9.5 7 13l8-8"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+
+                    </svg>
+
+                    <span data-i18n="hero_feature2">
+                        Deep red, nearly seedless fruit, 400–1000g
+                    </span>
+
+                </li>
+
+                <li>
+
+                    <svg
+                        class="li-icon"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        aria-hidden="true">
+
+                        <path
+                            d="M3 9.5 7 13l8-8"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+
+                    </svg>
+
+                    <span data-i18n="hero_feature3">
+                        Fruiting in 8–12 months, up to 3 harvests/year
+                    </span>
+
+                </li>
+
+                <li>
+
+                    <svg
+                        class="li-icon"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        aria-hidden="true">
+
+                        <path
+                            d="M3 9.5 7 13l8-8"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+
+                    </svg>
+
+                    <span data-i18n="hero_feature4">
+                        Grown in Bharuch, Gujarat — adapted to Indian soil
+                    </span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        </div>
+
+    </div>
+
+    <div
+        class="graft-divider"
+        aria-hidden="true">
+
+        <svg
+            viewBox="0 0 1200 24"
+            preserveAspectRatio="none">
+
+            <path
+                d="M0 12 Q 150 0, 300 12 T 600 12 T 900 12 T 1200 12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"
+                stroke-dasharray="6 6"/>
+
+        </svg>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+VARIETIES SECTION
+======================================== -->
+
+<section class="varieties">
+
+    <div class="container">
+
+        <p
+            class="eyebrow section-eyebrow"
+            data-i18n="varieties_eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            The Jarvi Range
+
+        </p>
+
+        <h2 data-i18n="varieties_title">
+            Our Varieties
+        </h2>
+
+        <p
+            class="section-sub"
+            data-i18n="varieties_description">
+
+            Four guava lines, each grafted for a different orchard goal — colour, density, sweetness, or scale.
+
+        </p>
+
+        <div class="variety-grid">
+        <div class="variety-card">
+
+            <div class="variety-photo has-photo">
+                <img src="images/variety-red.jpg" alt="Jarvi Red guava">
+                <div class="variety-photo-fallback" aria-hidden="true">🌱</div>
+            </div>
+
+            <span class="variety-index">01</span>
+
+            <h4 data-i18n="variety1_title">
+                Jarvi Red
+            </h4>
+
+            <p data-i18n="variety1_description">
+                Our flagship pink-flesh guava. Bestseller, in stock.
+            </p>
+
+            <span
+                class="variety-badge"
+                data-i18n="variety1_badge">
+
+                Bestseller
+
+            </span>
+
+            <span class="variety-reg">
+                PPVFR&amp;A Reg. No.: REG/2021/127
+            </span>
+
+        </div>
+
+        <div class="variety-card">
+
+            <div class="variety-photo has-photo">
+                <img src="images/variety-red1.jpg" alt="Jarvi Red 1 guava">
+                <div class="variety-photo-fallback" aria-hidden="true">🌿</div>
+            </div>
+
+            <span class="variety-index">02</span>
+
+            <h4 data-i18n="variety2_title">
+                Jarvi Red 1
+            </h4>
+
+            <p data-i18n="variety2_description">
+                Improved high-density variant of Jarvi Red.
+            </p>
+
+            <span
+                class="variety-badge"
+                data-i18n="variety2_badge">
+
+                High density
+
+            </span>
+
+            <span class="variety-reg">
+                PPVFR&amp;A Reg. No.: REG/2023/164
+            </span>
+
+        </div>
+
+        <div class="variety-card">
+
+            <div class="variety-photo has-photo">
+                <img src="images/variety-redplus.jpg" alt="Jarvi Red Plus guava">
+                <div class="variety-photo-fallback" aria-hidden="true">🍃</div>
+            </div>
+
+            <span class="variety-index">03</span>
+
+            <h4 data-i18n="variety3_title">
+                Jarvi Red Plus
+            </h4>
+
+            <p data-i18n="variety3_description">
+                Premium grade — bigger fruit, richer colour.
+            </p>
+
+            <span
+                class="variety-badge"
+                data-i18n="variety3_badge">
+
+                Premium Grade
+
+            </span>
+
+        </div>
+
+        <div class="variety-card">
+
+            <div class="variety-photo has-photo">
+                <img src="images/variety-white.jpg" alt="Jarvi White Honey guava">
+                <div class="variety-photo-fallback" aria-hidden="true">🌼</div>
+            </div>
+
+            <span class="variety-index">04</span>
+
+            <h4 data-i18n="variety4_title">
+                Jarvi White Honey
+            </h4>
+
+            <p data-i18n="variety4_description">
+                Sweet white-flesh guava with a honey-like aroma.
+            </p>
+
+            <span
+                class="variety-badge"
+                data-i18n="variety4_badge">
+
+                Honey Sweet
+
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="center">
+
+        <a
+            href="order.html"
+            class="btn btn-primary"
+            data-i18n="varieties_button">
+
+            Place Your Order
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- =======================================
+GALLERY SECTION
+Drop images/gallery-1.jpg through gallery-6.jpg
+in place and add class="has-photo" to each
+.gallery-item below to activate the real photo.
+======================================== -->
+
+<section class="gallery-section">
+
+    <div class="container">
+
+        <p class="eyebrow section-eyebrow" data-i18n="gallery_eyebrow">
+            <span class="eyebrow-dot"></span>
+            From Our Nursery
+        </p>
+
+        <h2 data-i18n="gallery_title">
+            A Look Inside Jarvi
+        </h2>
+
+        <p class="section-sub" data-i18n="gallery_description">
+            Real saplings, real fruit, real fields — straight from Bharuch, Gujarat.
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item has-photo">
+                <img src="images/gallery-1.jpg" alt="Jarvi guava saplings">
+                <div class="gallery-fallback fallback-sprout" aria-hidden="true"></div>
+                <span class="gallery-caption" data-i18n="gallery_caption1">Young Saplings</span>
+            </div>
+
+            <div class="gallery-item has-photo">
+                <img src="images/gallery-2.jpg" alt="Ripe Jarvi Red guava fruit">
+                <div class="gallery-fallback fallback-guava" aria-hidden="true"></div>
+                <span class="gallery-caption" data-i18n="gallery_caption2">Ripe Jarvi Red</span>
+            </div>
+
+            <div class="gallery-item has-photo">
+                <img src="images/gallery-3.jpg" alt="Guava orchard field">
+                <div class="gallery-fallback fallback-field" aria-hidden="true"></div>
+                <span class="gallery-caption" data-i18n="gallery_caption3">Orchard in Bharuch</span>
+            </div>
+
+            <div class="gallery-item has-photo">
+                <img src="images/gallery-4.jpg" alt="Guava cross-section showing pink flesh">
+                <div class="gallery-fallback fallback-guava" aria-hidden="true"></div>
+                <span class="gallery-caption" data-i18n="gallery_caption4">Deep Pink Flesh</span>
+            </div>
+
+            <div class="gallery-item has-photo">
+                <img src="images/gallery-5.jpg" alt="Nursery rows of saplings">
+                <div class="gallery-fallback fallback-sprout" aria-hidden="true"></div>
+                <span class="gallery-caption" data-i18n="gallery_caption5">Nursery Rows</span>
+            </div>
+
+            <div class="gallery-item has-photo">
+                <img src="images/gallery-6.jpg" alt="Harvested guava crates">
+                <div class="gallery-fallback fallback-field" aria-hidden="true"></div>
+                <span class="gallery-caption" data-i18n="gallery_caption6">Ready for Delivery</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+VARIETY COMPARISON SECTION
+======================================== -->
+
+<section class="compare-section">
+
+    <div class="container">
+
+        <p
+            class="eyebrow section-eyebrow"
+            data-i18n="compare_eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            Know Your Guava
+
+        </p>
+
+        <h2 data-i18n="compare_title">
+            Jarvi Red vs Jarvi Red-1
+        </h2>
+
+        <p
+            class="section-sub"
+            data-i18n="compare_description">
+
+            A detailed look at how our two flagship varieties compare, straight from our own field trial data.
+
+        </p>
+
+        <div class="compare-table-wrap">
+
+            <table class="compare-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th data-i18n="compare_th_spec">Specification</th>
+
+                        <th>
+                            <span class="compare-col-title">Jarvi Red</span>
+                            <span class="compare-col-reg">PPVFR&amp;A Reg. No.: REG/2021/127</span>
+                        </th>
+
+                        <th>
+                            <span class="compare-col-title">Jarvi Red-1</span>
+                            <span class="compare-col-reg">PPVFR&amp;A Reg. No.: REG/2023/164</span>
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td data-i18n="compare_label_year">Year of Development</td>
+                        <td>2008-09</td>
+                        <td>2020-21</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_yield">Fruit Yield</td>
+                        <td data-i18n="compare_red_yield">55 t/ha (Average after 3 year)</td>
+                        <td data-i18n="compare_red1_yield">60 t/ha (Average after 3 year)</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_shape">Fruit Shape</td>
+                        <td data-i18n="compare_red_shape">Rounded</td>
+                        <td data-i18n="compare_red1_shape">Necked (Pear Shape)</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_weight">Average Fruit Weight</td>
+                        <td>350-400 g</td>
+                        <td>450-500 g</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_colour">Fruit Pulp Colour</td>
+                        <td data-i18n="compare_pulp_colour">Red Purple group</td>
+                        <td data-i18n="compare_pulp_colour">Red Purple group</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_thickness">Fruit Pulp Thickness</td>
+                        <td data-i18n="compare_red_thickness">Thick - ~3.00 cm</td>
+                        <td data-i18n="compare_red1_thickness">Thick – ~2.8 cm</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_acidity">Fruit Acidity (%)</td>
+                        <td data-i18n="compare_red_acidity">Low (Average – 0.42)</td>
+                        <td data-i18n="compare_red1_acidity">Low (Average – 0.34)</td>
+                    </tr>
+
+                    <tr>
+                        <td>TSS (⁰B)</td>
+                        <td>13.0-14.5 (⁰B)</td>
+                        <td>14.0-15.5 (⁰B)</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_vitc">Vitamin C</td>
+                        <td>260-275 mg/100g</td>
+                        <td>280-300 mg/100g</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_seeds">Seeds per 100g Fruit Weight</td>
+                        <td data-i18n="compare_red_seeds">3-4 seeds</td>
+                        <td data-i18n="compare_red1_seeds">9-12 seeds</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_hardness">Seed Hardiness (Kg/cm²)</td>
+                        <td data-i18n="compare_red_hardness">Soft seed - 12.2 kg/cm²</td>
+                        <td data-i18n="compare_red1_hardness">Medium hard seed – 10.3 kg/cm²</td>
+                    </tr>
+
+                    <tr>
+                        <td data-i18n="compare_label_purpose">Purpose</td>
+                        <td data-i18n="compare_purpose">Especially suitable for table purpose</td>
+                        <td data-i18n="compare_purpose">Especially suitable for table purpose</td>
+                    </tr>
+
+                    <tr class="compare-note-row">
+                        <td data-i18n="compare_label_note">Note</td>
+                        <td data-i18n="compare_red_note">
+                            Main Drawback: fruit setting is less when temperature increases above 34°C.
+                        </td>
+                        <td data-i18n="compare_red1_note">
+                            Advantage: no issue regarding fruit setting till 45°C.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+COLLABORATION SECTION
+(logos to be added here later)
+======================================== -->
+
+<section class="collab-section">
+
+    <div class="container collab-inner">
+
+        <p class="collab-quote" data-i18n="collab_quote">
+            &ldquo;Great things in farming grow through great partnerships.&rdquo;
+        </p>
+
+        <p class="collab-line" data-i18n="collab_line">
+            In Collaboration with Akshar Nursery
+        </p>
+
+        <!-- Partner logos will go here once ready -->
+        <div class="collab-logos"></div>
+
+    </div>
+
+</section>
+
+<!-- =======================================
+FOOTER
+======================================== -->
+
+<footer class="site-footer" id="contact">
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <img
+                    src="images/JarviLogo.jpg"
+                    alt="Jarvi Nursery"
+                    class="footer-logo-img">
+
+            </div>
+
+            <p data-i18n="footer_description">
+
+                Guava saplings grown for real fields,
+                real soil, and real income.
+
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h5 data-i18n="footer_visit">
+                Visit / Write
+            </h5>
+
+            <p>
+
+                <span data-i18n="footer_address1">
+                    Jarvi Seeds & Nursery Pvt. Ltd.
+                </span>
+
+                <br>
+
+                <span data-i18n="footer_address2">
+                    House No. 17, Opp. Water Tank, At &amp; Post Bharadia, Tal. Valia, Dist. Bharuch, Gujarat, India — 393135
+                </span>
+
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h5 data-i18n="footer_call">
+                Call Us
+            </h5>
+
+            <p>
+
+                <a href="tel:+918128314911">
+                    +91 81283 14911
+                </a>
+
+                <br>
+
+                <a href="tel:+918140588289">
+                    +91 81405 88289
+                </a>
+
+                <br>
+
+                <a href="tel:+919081935975">
+                    +91 90819 35975
+                </a>
+
+            </p>
+
+            <p class="footer-extra-contact">
+
+                <span class="footer-contact-label" data-i18n="footer_office_contact_label">Office Contact:</span>
+                <a href="tel:+919725633994">+91 97256 33994</a>
+
+                <br>
+
+                <span class="footer-contact-label" data-i18n="footer_dealer_contact_label">Dealer Contact:</span>
+                <a href="tel:+919063110963">+91 90631 10963</a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+              <p data-i18n="footer_copyright">
+            &copy; 2026 Jarvi Seeds & Nursery Pvt. Ltd.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- =======================================
+JAVASCRIPT
+======================================= -->
+
+<script src="js/language.js"></script>
+
+</body>
+</html>
