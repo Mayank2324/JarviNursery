@@ -43,7 +43,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   submitBtn.disabled = true;
-  submitBtn.textContent = "Submitting...";
+  submitBtn.innerHTML = "Submitting...";
 
   try {
     const res = await fetch(`${API_BASE}/api/orders`, {
@@ -58,6 +58,8 @@ form.addEventListener("submit", async (e) => {
       formMessage.textContent = `Order placed! Your Order ID is ${data.uniqueId}. A confirmation SMS is on its way.`;
       form.reset();
       document.querySelectorAll('input[type="number"]').forEach((el) => (el.disabled = true));
+      submitBtn.innerHTML = "Order Submitted";
+      submitBtn.disabled = true;
     } else {
       formMessage.classList.add("error");
       formMessage.textContent = data.message || "Something went wrong. Please try again.";
@@ -66,7 +68,18 @@ form.addEventListener("submit", async (e) => {
     formMessage.classList.add("error");
     formMessage.textContent = "Could not reach the server. Please check your connection and try again.";
   } finally {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = submitBtnOriginalHTML;
-  }
+    if (!formMessage.classList.contains("success")) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitBtnOriginalHTML;
+    }
+}
+});
+form.addEventListener("input", () => {
+    if (formMessage.classList.contains("success")) {
+        formMessage.classList.remove("success");
+        formMessage.textContent = "";
+
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitBtnOriginalHTML;
+    }
 });
