@@ -1747,7 +1747,8 @@ body{
 .hero-visual-stack .hero-card{
     position:relative;
     z-index:2;
-    margin:-42px 18px 0;
+    margin:-20px 25px 0;
+
 }
 
 @media(max-width:900px){
