@@ -10,6 +10,7 @@ const adminRoutes = require("./routes/adminRoutes");
 const reportRoutes = require("./routes/reportRoutes");
 const exportRoutes = require("./routes/exportRoutes");
 
+
 const app = express();
 
 app.use(cors());
@@ -33,7 +34,8 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 connectDB().then(() => {
-    app.listen(PORT, () => {
+    app.listen(PORT, async () => {
         console.log(`Jarvi Seeds server running on http://localhost:${PORT}`);
+
     });
 });
