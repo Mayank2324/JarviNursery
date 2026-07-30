@@ -10,6 +10,14 @@ document.querySelectorAll(".variety-check").forEach((checkbox) => {
 const form = document.getElementById("orderForm");
 const submitBtn = document.getElementById("submitBtn");
 const formMessage = document.getElementById("responseMessage");
+// Restrict delivery date to today or future
+const deliveryDateInput = document.getElementById("deliveryDate");
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const minDate = today.toISOString().split("T")[0];
+deliveryDateInput.min = minDate;
 
 // Same-origin API base. If you host the frontend separately from the
 // backend, replace this with the full backend URL, e.g.
