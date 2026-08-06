@@ -1,8 +1,4 @@
 const nodemailer = require("nodemailer");
-
-const nodemailer = require("nodemailer");
-
-const nodemailer = require("nodemailer");
 const dns = require("dns");
 
 const transporter = nodemailer.createTransport({
@@ -13,10 +9,21 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
-  family: 4,          // Force IPv4
+  family: 4,
   dnsLookup: (hostname, options, callback) => {
-    return dns.lookup(hostname, { family: 4 }, callback);
+    dns.lookup(hostname, { family: 4 }, callback);
   },
+  connectionTimeout: 30000,
+  greetingTimeout: 30000,
+  socketTimeout: 30000,
+});
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("❌ SMTP Verify Error:", error);
+  } else {
+    console.log("✅ SMTP Server is ready");
+  }
 });
 
 const sendOrderEmail = async (order) => {
