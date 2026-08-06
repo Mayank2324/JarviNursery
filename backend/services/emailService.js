@@ -1,29 +1,11 @@
-const nodemailer = require("nodemailer");
+const SibApiV3Sdk = require("@getbrevo/brevo");
 
-console.log("========== BREVO CONFIG ==========");
-console.log("BREVO_LOGIN:", process.env.BREVO_LOGIN);
-console.log("BREVO_SENDER_EMAIL:", process.env.BREVO_SENDER_EMAIL);
-console.log("OWNER_EMAIL:", process.env.OWNER_EMAIL);
-console.log("SMTP KEY EXISTS:", !!process.env.BREVO_SMTP_KEY);
-console.log("==================================");
+const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
-const transporter = nodemailer.createTransport({
-  host: "smtp-relay.brevo.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.BREVO_LOGIN,
-    pass: process.env.BREVO_SMTP_KEY,
-  },
-});
-
-transporter.verify((error, success) => {
-  if (error) {
-    console.error("❌ Brevo SMTP Verify Error:", error);
-  } else {
-    console.log("✅ Brevo SMTP Server is ready");
-  }
-});
+apiInstance.setApiKey(
+  SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey,
+  process.env.BREVO_API_KEY
+);
 
 const sendOrderEmail = async (order) => {
   try {
@@ -41,11 +23,18 @@ const sendOrderEmail = async (order) => {
     if (order.varieties.jarviWhiteHoney > 0)
       varieties.push(`Jarvi White Honey: ${order.varieties.jarviWhiteHoney}`);
 
-    await transporter.sendMail({
-      from: `"Jarvi Nursery" <${process.env.BREVO_SENDER_EMAIL}>`,
-      to: process.env.OWNER_EMAIL,
+    const email = {
+      sender: {
+        name: "Jarvi Nursery",
+        email: process.env.BREVO_SENDER_EMAIL,
+      },
+      to: [
+        {
+          email: process.env.OWNER_EMAIL,
+        },
+      ],
       subject: `🌱 New Order Received - ${order.uniqueId}`,
-      text: `
+      textContent: `
 New Order Received
 
 Order ID: ${order.uniqueId}
@@ -64,13 +53,19 @@ Delivery Date: ${order.deliveryDate}
 
 Ordered Varieties:
 ${varieties.join("\n")}
-      `,
-    });
+`,
+    };
 
-    console.log("✅ Order email sent successfully.");
+    const result = await apiInstance.sendTransacEmail(email);
+
+    console.log("✅ Email sent successfully");
+    console.log(result);
+
     return true;
   } catch (error) {
-    console.error("❌ Email Error:", error);
+    console.error("❌ Brevo Email API Error:");
+    console.error(error.response?.body || error);
+
     return false;
   }
 };
