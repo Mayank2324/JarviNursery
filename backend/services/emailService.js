@@ -1,11 +1,4 @@
-const SibApiV3Sdk = require("@getbrevo/brevo");
-
-const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
-
-apiInstance.setApiKey(
-  SibApiV3Sdk.TransactionalEmailsApiApiKeys.apiKey,
-  process.env.BREVO_API_KEY
-);
+const axios = require("axios");
 
 const sendOrderEmail = async (order) => {
   try {
@@ -23,18 +16,20 @@ const sendOrderEmail = async (order) => {
     if (order.varieties.jarviWhiteHoney > 0)
       varieties.push(`Jarvi White Honey: ${order.varieties.jarviWhiteHoney}`);
 
-    const email = {
-      sender: {
-        name: "Jarvi Nursery",
-        email: process.env.BREVO_SENDER_EMAIL,
-      },
-      to: [
-        {
-          email: process.env.OWNER_EMAIL,
+    await axios.post(
+      "https://api.brevo.com/v3/smtp/email",
+      {
+        sender: {
+          name: "Jarvi Nursery",
+          email: process.env.BREVO_SENDER_EMAIL,
         },
-      ],
-      subject: `🌱 New Order Received - ${order.uniqueId}`,
-      textContent: `
+        to: [
+          {
+            email: process.env.OWNER_EMAIL,
+          },
+        ],
+        subject: `🌱 New Order Received - ${order.uniqueId}`,
+        textContent: `
 New Order Received
 
 Order ID: ${order.uniqueId}
@@ -53,18 +48,28 @@ Delivery Date: ${order.deliveryDate}
 
 Ordered Varieties:
 ${varieties.join("\n")}
-`,
-    };
+        `,
+      },
+      {
+        headers: {
+          accept: "application/json",
+          "api-key": process.env.BREVO_API_KEY,
+          "content-type": "application/json",
+        },
+      }
+    );
 
-    const result = await apiInstance.sendTransacEmail(email);
-
-    console.log("✅ Email sent successfully");
-    console.log(result);
-
+    console.log("✅ Email sent successfully using Brevo API");
     return true;
   } catch (error) {
-    console.error("❌ Brevo Email API Error:");
-    console.error(error.response?.body || error);
+    console.error("❌ Brevo API Error:");
+
+    if (error.response) {
+      console.error(error.response.status);
+      console.error(error.response.data);
+    } else {
+      console.error(error.message);
+    }
 
     return false;
   }
