@@ -1,20 +1,20 @@
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.BREVO_LOGIN,
+    pass: process.env.BREVO_SMTP_KEY,
   },
-  connectionTimeout: 60000,
-  greetingTimeout: 60000,
-  socketTimeout: 60000,
 });
-transporter.verify((error, success) => {
+
+transporter.verify((error) => {
   if (error) {
-    console.error("❌ SMTP Verify Error:", error);
+    console.error("❌ Brevo SMTP Verify Error:", error);
   } else {
-    console.log("✅ SMTP Server is ready");
+    console.log("✅ Brevo SMTP Server is ready");
   }
 });
 
@@ -35,7 +35,7 @@ const sendOrderEmail = async (order) => {
       varieties.push(`Jarvi White Honey: ${order.varieties.jarviWhiteHoney}`);
 
     await transporter.sendMail({
-      from: `"Jarvi Nursery" <${process.env.EMAIL_USER}>`,
+      from: `"Jarvi Nursery" <${process.env.BREVO_SENDER_EMAIL}>`,
       to: process.env.OWNER_EMAIL,
       subject: `🌱 New Order Received - ${order.uniqueId}`,
       text: `
