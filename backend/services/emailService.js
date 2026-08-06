@@ -1,5 +1,12 @@
 const nodemailer = require("nodemailer");
 
+console.log("========== BREVO CONFIG ==========");
+console.log("BREVO_LOGIN:", process.env.BREVO_LOGIN);
+console.log("BREVO_SENDER_EMAIL:", process.env.BREVO_SENDER_EMAIL);
+console.log("OWNER_EMAIL:", process.env.OWNER_EMAIL);
+console.log("SMTP KEY EXISTS:", !!process.env.BREVO_SMTP_KEY);
+console.log("==================================");
+
 const transporter = nodemailer.createTransport({
   host: "smtp-relay.brevo.com",
   port: 587,
@@ -10,7 +17,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-transporter.verify((error) => {
+transporter.verify((error, success) => {
   if (error) {
     console.error("❌ Brevo SMTP Verify Error:", error);
   } else {
